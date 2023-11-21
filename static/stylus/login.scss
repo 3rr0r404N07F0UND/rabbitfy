@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+$fontVar: "Noto Sans KR", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fontVar;
+  font-size: 10px;
+}
+h1 {
+  font-size: 30/1920 * 100vw;
+  text-align: center;
+  margin-bottom: 20/1920 * 100vw;
+}
+form,
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba($color: #ededed, $alpha: 1);
+  width: 500/1920 * 100vw;
+  height: 300/1920 * 100vw;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 10px 1px lightblue;
+  padding: 30/1920 * 100vw;
+  & > p {
+    visibility: hidden;
+    color: red;
+    font-size: 20/1920 * 100vw;
+    line-height: 20/1920 * 100vw;
+    i {
+      font-size: 20/1920 * 100vw;
+      margin-right: 10/1920 * 100vw;
+    }
+  }
+}
+input {
+  width: 100%;
+  height: 35/1920 * 100vw;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10/1920 * 100vw;
+  font-size: 20/1920 * 100vw;
+  margin-bottom: 30/1920 * 100vw;
+  &:focus {
+    outline: none;
+  }
+}
+button {
+  transition: all 0.3s;
+  width: 75/1920 * 100vw;
+  height: 35/1920 * 100vw;
+  font-size: 20/1920 * 100vw;
+  color: white;
+  background-color: #1b73e8;
+  border: none;
+  border-radius: 5/1920 * 100vw;
+  float: right;
+  &:hover {
+    transition: all 0.3s;
+    background-color: #1f65c9;
+  }
+  &:active {
+    transition: all 0.3s;
+    background-color: #22539c;
+  }
+}
+.modal {
+  display: none;
+}
+.displayNone {
+  display: none;
+}
+.centerMargin {
+  margin: auto;
+  text-align: center;
+  & > button {
+    margin-top: 100/1920 * 100vw;
+    float: none;
+    &:nth-child(2) {
+      margin-left: 30/1920 * 100vw;
+    }
+  }
+}
+.introP {
+  visibility: visible;
+  color: black;
+  text-align: center;
+  margin-bottom: 100/1920 * 100vw;
+  line-height: 25/1920 * 100vw;
+}
+#introButton {
+  float: initial;
+  margin: auto;
+  display: block;
+}
+@media all and (max-width: 1024px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fontVar;
+    font-size: 10px;
+  }
+  h1 {
+    font-size: 120/1920 * 100vw;
+    text-align: center;
+    margin-bottom: 20/1920 * 100vw;
+  }
+  form,
+  main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba($color: #ededed, $alpha: 1);
+    width: 1500/1920 * 100vw;
+    height: 900/1920 * 100vw;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px 1px lightblue;
+    padding: 30/1920 * 100vw;
+    & > p {
+      visibility: hidden;
+      color: red;
+      font-size: 90/1920 * 100vw;
+      line-height: 90/1920 * 100vw;
+      i {
+        font-size: 90/1920 * 100vw;
+        margin-right: 10/1920 * 100vw;
+      }
+    }
+  }
+  input {
+    width: 100%;
+    height: 150/1920 * 100vw;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    padding: 20/1920 * 100vw;
+    font-size: 90/1920 * 100vw;
+    margin-bottom: 30/1920 * 100vw;
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    transition: all 0.3s;
+    width: 275/1920 * 100vw;
+    height: 150/1920 * 100vw;
+    font-size: 90/1920 * 100vw;
+    color: white;
+    background-color: #1b73e8;
+    border: none;
+    border-radius: 22.5/1920 * 100vw;
+    float: right;
+    &:hover {
+      transition: all 0.3s;
+      background-color: #1f65c9;
+    }
+    &:active {
+      transition: all 0.3s;
+      background-color: #22539c;
+    }
+  }
+  .modal {
+    display: none;
+  }
+  .displayNone {
+    display: none;
+  }
+  .centerMargin {
+    margin: auto;
+    text-align: center;
+    & > button {
+      margin-top: 100/1920 * 100vw;
+      float: none;
+      &:nth-child(2) {
+        margin-left: 30/1920 * 100vw;
+      }
+    }
+  }
+  .introP {
+    visibility: visible;
+    color: black;
+    text-align: center;
+    margin-bottom: 50/1920 * 100vw;
+    line-height: initial;
+  }
+  #introButton {
+    float: initial;
+    margin: auto;
+    display: block;
+  }
+}

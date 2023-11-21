@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabbitfy</title>
+    <link rel="stylesheet" href="./stylus/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  </head>
+  <body>
+    <section>
+      <aside>
+        <h1 class="hoverCursor"><img src="./img/Bad Bunny (1).svg">Rabbitfy</h1>
+        <nav class="navSelect">
+          <p class="click selectClick" id="Home"><i class="xi-home-o"></i>Home</p>
+          <p class="click" id="Search"><i class="xi-search"></i>Search</p>
+          <p class="click" id="Library"><i class="xi-library-music"></i>Your Library</p>
+        </nav>
+        <div class="library">
+          <!--each library in resultLibrary-->
+          <!--  .hoverCursor-->
+          <!--    .singerBG-->
+          <!--      img(src="./img/Love_Heart_SVG.svg", alt="")-->
+          <!--    div-->
+          <!--      p.libraryTitle #{ library.library_name }-->
+          <!--      p.makerName #{ library.maker_name }-->
+        </div>
+      </aside>
+      <main>
+        <nav>
+          <div class="controller"><i class="xi-angle-left hoverCursor"></i><i class="xi-angle-right hoverCursor"></i></div>
+          <input class="searchBar" type="text" placeholder="What do you want to listen to?">
+          <div class="userIcon"><img src="./img/dev-jeans.png" type="img/png">
+            <p class="userName">UserName</p>
+          </div>
+        </nav>
+        <section class="mainItem">
+          <div class="goodTime flexBox flexDirectionColumn firstBox" id="goodTime">
+            <h2>Good evening</h2>
+            <div class="flexBox flexDirectionRow">
+              <div class="hoverLighten transitionClass hoverCursor">
+                <div class="imgDiv"></div>
+                <p>Aimyon</p>
+              </div>
+              <div class="hoverLighten transitionClass hoverCursor">
+                <div class="imgDiv"></div>
+              </div>
+              <div class="hoverLighten transitionClass hoverCursor">
+                <div class="imgDiv"></div>
+              </div>
+              <div class="hoverLighten transitionClass hoverCursor">
+                <div class="imgDiv"></div>
+              </div>
+              <div class="hoverLighten transitionClass hoverCursor">
+                <div class="imgDiv"></div>
+              </div>
+              <div class="hoverLighten transitionClass hoverCursor">
+                <div class="imgDiv"></div>
+              </div>
+            </div>
+          </div>
+          <div class="secondBox">
+            <h3>Made For Rabbitfy</h3>
+            <div class="flexBox flexDirectionRow">
+              <div class="hoverLighten transitionClass hoverCursor">
+                <div class="imgDiv"></div>
+                <p class="mainP">Discover Weekly</p>
+                <p>설명충이다.</p>
+              </div>
+              <div class="hoverLighten transitionClass hoverCursor">
+                <div class="imgDiv"></div>
+              </div>
+              <div class="hoverLighten transitionClass hoverCursor">
+                <div class="imgDiv"></div>
+              </div>
+              <div class="hoverLighten transitionClass hoverCursor">
+                <div class="imgDiv"></div>
+              </div>
+              <div class="hoverLighten transitionClass hoverCursor">
+                <div class="imgDiv"></div>
+              </div>
+            </div>
+          </div>
+          <div class="secondBox">
+            <h3>Artists</h3>
+            <div class="flexBox flexDirectionRow">
+              <div class="hoverLighten transitionClass hoverCursor">
+                <div class="imgDiv borderRadius50"></div>
+                <p class="mainP"></p>
+                <p></p>
+              </div>
+              <div class="hoverLighten transitionClass hoverCursor">
+                <div class="imgDiv borderRadius50"></div>
+                <p class="mainP"></p>
+                <p></p>
+              </div>
+              <div class="hoverLighten transitionClass hoverCursor">
+                <div class="imgDiv borderRadius50"></div>
+                <p class="mainP"></p>
+                <p></p>
+              </div>
+              <div class="hoverLighten transitionClass hoverCursor">
+                <div class="imgDiv borderRadius50"></div>
+                <p class="mainP"></p>
+                <p></p>
+              </div>
+              <div class="hoverLighten transitionClass hoverCursor">
+                <div class="imgDiv borderRadius50"></div>
+                <p class="mainP"></p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </section>
+    <section class="playBar">
+      <div class="musicInfo">
+        <div class="musicPhoto"></div>
+        <div class="musicTitle">자드보다 아이묭
+          <p class="singerInfo">아이묭</p>
+        </div>
+      </div>
+      <div class="audioController">
+        <div class="rangeBarBox">
+          <div class="pauseStartBox"><i class="xi-shuffle hoverCursor" id="shuffleOption"></i><i class="xi-step-backward hoverCursor" id="backward"></i><i class="xi-play hoverCursor" id="play"></i><i class="xi-step-forward hoverCursor" id="forward"></i><i class="xi-repeat hoverCursor" id="repeat"></i></div>
+          <input class="rangeBar hoverCursor" id="rangerBar" type="range" value="0">
+        </div>
+        <div class="soundOption"><i class="xi-library-music hoverCursor"></i><i class="xi-volume-up hoverCursor"></i>
+          <input class="hoverCursor" id="sound" type="range" value="100"><i class="xi-focus-frame hoverCursor"></i>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

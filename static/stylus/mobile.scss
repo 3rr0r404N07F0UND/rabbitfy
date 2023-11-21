@@ -1,0 +1,502 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+$fontVar: "Noto Sans KR", sans-serif;
+$borderColor: #222;
+$insideColor: #19a7ce;
+$colorChangeBlack: #f6f1f1;
+$colorChangeWhite: #146c94;
+@media all and (max-width: 1024px) {
+  * {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: $fontVar;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  body,
+  html {
+    width: 100%;
+    height: -webkit-fill-available;
+    overflow: hidden;
+    background-color: $colorChangeWhite;
+    & > section {
+      height: 90%;
+      width: 100%;
+      display: block;
+      grid-template-columns: 270/1920 * 100vw 1fr;
+      overflow: hidden;
+      padding-top: 10/1920 * 100vw;
+    }
+  }
+  aside {
+    height: initial;
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 10/1920 * 100vw;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    & > * {
+      border-radius: 10px;
+    }
+    h1 {
+      display: none;
+      padding: 10/1920 * 100vw;
+      height: 100/1920 * 100vw;
+      width: 100%;
+      color: $colorChangeBlack;
+      background-color: $insideColor;
+      margin-bottom: 10/1920 * 100vw;
+      font-size: 40/1920 * 100vw;
+      line-height: 80/1920 * 100vw;
+      font-weight: bold;
+      & > img {
+        height: 100%;
+        float: left;
+      }
+    }
+    nav {
+      margin-bottom: 10/1920 * 100vw;
+      width: 100%;
+      height: initial;
+      background-color: $insideColor;
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      padding: 10/1920 * 100vw;
+      & > p {
+        font-size: 100/1920 * 100vw;
+        * {
+          font-size: 100/1920 * 100vw;
+        }
+      }
+    }
+    .library {
+      display: none;
+      width: 100%;
+      flex-grow: 0;
+      background-color: $insideColor;
+      padding-top: 10/1920 * 100vw;
+      overflow-y: auto;
+      & > div {
+        width: 100%;
+        height: initial;
+        margin-bottom: 10/1920 * 100vw;
+        padding-left: 5/1920 * 100vw;
+        overflow: hidden;
+        & > div {
+          height: 100%;
+          float: left;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          & > p {
+            color: $colorChangeBlack;
+          }
+        }
+        .singerBG {
+          border-radius: 10px;
+          width: 50/1920 * 100vw;
+          height: 50/1920 * 100vw;
+          margin-right: 5/1920 * 100vw;
+          background-image: linear-gradient(blue, pink);
+          //이거 js로 랜덤으로 줄거임
+          background-position: center;
+          padding: 6/1920 * 100vw;
+          img {
+            height: 100%;
+          }
+        }
+        .libraryTitle {
+          font-size: 15/1920 * 100vw;
+        }
+        .makerName {
+          font-size: 12/1920 * 100vw;
+          color: rgba($color: $colorChangeBlack, $alpha: 0.6);
+        }
+      }
+    }
+  }
+  main {
+    width: 100%;
+    height: 80%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    background-color: $insideColor;
+    margin-right: 10/1920 * 100vw;
+    margin-bottom: 0;
+    border-radius: 10/1920 * 100vw;
+    overflow: hidden;
+    nav {
+      height: initial;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 15/1920 * 100vw;
+      .userIcon {
+        display: none;
+        width: 250/1920 * 100vw;
+        height: 50/1920 * 100vw;
+        background-color: $colorChangeBlack;
+        float: right;
+        padding: 8/1920 * 100vw;
+        border-radius: 30px;
+        border: 1px solid #777;
+        img {
+          border-radius: 50%;
+          height: 100%;
+          float: left;
+          margin-right: 10/1920 * 100vw;
+        }
+        .userName {
+          color: $colorChangeWhite;
+          font-size: 30/1920 * 100vw;
+          font-weight: bold;
+          line-height: 28/1920 * 100vw;
+          float: left;
+        }
+      }
+    }
+    .mainItem {
+      width: 100%;
+      flex-grow: 1;
+      overflow-y: auto;
+      & > .firstBox {
+        width: 100%;
+        height: initial;
+        margin-bottom: 10/1920 * 100vw;
+        padding-left: 30/1920 * 100vw;
+        padding-right: 30/1920 * 100vw;
+        padding-top: 20/1920 * 100vw;
+        & > div {
+          flex-grow: 1;
+          flex-wrap: wrap;
+          overflow: hidden;
+          justify-content: space-between;
+          padding-right: 10/1920 * 100vw;
+          & > div {
+            width: 600/1920 * 100vw;
+            height: 200/1920 * 100vw;
+            background-color: rgba($color: darkgray, $alpha: 0.4);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 80/1920 * 100vw;
+            & > .imgDiv {
+              height: 200/1920 * 100vw;
+              width: 200/1920 * 100vw;
+              background-image: url("../img/backgroundImg_testing.jpg");
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              float: left;
+              margin-right: 20/1920 * 100vw;
+            }
+            & > p {
+              line-height: 180/1920 * 100vw;
+              font-size: 80/1920 * 100vw;
+              color: $colorChangeBlack;
+              float: left;
+            }
+          }
+        }
+      }
+      & > .secondBox {
+        margin-bottom: 10/1920 * 100vw;
+        padding-left: 30/1920 * 100vw;
+        padding-right: 30/1920 * 100vw;
+        overflow: hidden;
+        & > div {
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+          & > div {
+            margin-bottom: 80/1920 * 100vw;
+            width: 500/1920 * 100vw;
+            height: 700/1920 * 100vw;
+            border-radius: 15px;
+            background-color: rgba($color: darkgray, $alpha: 0.4);
+            overflow: hidden;
+            //padding: 10/1920 * 100vw;
+            //padding-top: 10/1920 * 100vw;
+            padding: 0;
+            padding-top: 0;
+            & > .imgDiv {
+              margin: auto;
+              //margin-top: 20/1920 * 100vw;
+              width: 100%;
+              height: 350/1920 * 100vw;
+              background-image: url("../img/testingImg.jpeg");
+              border-radius: 0;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+            .mainP {
+              margin-top: 30/1920 * 100vw;
+              font-size: 60/1920 * 100vw;
+              margin-bottom: 5/1920 * 100vw;
+            }
+            p {
+              text-align: center;
+              margin-left: 0;
+              text-overflow: ellipsis;
+              color: $colorChangeBlack;
+              font-size: 45/1920 * 100vw;
+            }
+          }
+        }
+      }
+      h2 {
+        font-size: 120/1920 * 100vw;
+        color: $colorChangeBlack;
+        margin-bottom: 60/1920 * 100vw;
+      }
+      h3 {
+        font-size: 100/1920 * 100vw;
+        color: $colorChangeBlack;
+        margin-bottom: 60/1920 * 100vw;
+      }
+    }
+  }
+  .borderRadius50 {
+    border-radius: 0 !important;
+  }
+  .playBar {
+    width: 100%;
+    height: 10%;
+    .musicInfo {
+      width: 450/1920 * 100vw;
+      float: left;
+      height: 100%;
+      padding: 20/1920 * 100vw;
+      .musicPhoto {
+        display: none;
+        float: left;
+        height: 57.5/1920 * 100vw;
+        width: 57.5/1920 * 100vw;
+        background-image: url("../img/music_logo_testing.png");
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        margin-right: 10/1920 * 100vw;
+      }
+      .musicTitle {
+        font-size: 80/1920 * 100vw;
+        line-height: 57.5/1920 * 100vw;
+        overflow: hidden;
+        height: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: $colorChangeBlack;
+        padding-top: 10/1920 * 100vw;
+        padding-left: 20/1920 * 100vw;
+        p {
+          margin-top: 20/1920 * 100vw;
+          font-size: 48/1920 * 100vw;
+        }
+      }
+    }
+    .audioController {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      .rangeBarBox {
+        padding: 10/1920 * 100vw;
+        height: 100%;
+        text-align: center;
+        .pauseStartBox {
+          color: $colorChangeBlack;
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          margin: auto;
+          margin-bottom: 5/1920 * 100vw;
+          * {
+            font-size: 150/1920 * 100vw;
+          }
+        }
+        .rangeBar {
+          width: 100%;
+          display: inline-block;
+        }
+      }
+      .soundOption {
+        height: 100%;
+        padding: 10/1920 * 100vw;
+        text-align: right;
+        padding-right: 40/1920 * 100vw;
+        * {
+          line-height: initial;
+          color: $colorChangeBlack;
+          font-size: 150/1920 * 100vw !important;
+          margin-right: 10px;
+        }
+        input {
+          width: 30%;
+        }
+      }
+    }
+  }
+  .controller {
+    float: left;
+    height: 100%;
+    display: none;
+    i {
+      color: $colorChangeBlack;
+      margin-right: 20/1920 * 100vw;
+      font-size: 40/1920 * 100vw;
+    }
+  }
+  .searchBar {
+    float: left;
+    width: 95%;
+    height: 150/1920 * 100vw;
+    border-radius: 30px;
+    //background-color: #242424;
+    border: none;
+    padding: 20/1920 * 100vw;
+    font-size: 10px;
+    color: $colorChangeBlack;
+    &:hover {
+      background-color: #2a2a2a;
+      outline: 2px solid #414141;
+    }
+    &:focus {
+      outline: 3px solid $colorChangeBlack;
+      background-color: #2a2a2a;
+      color: white;
+    }
+    &::placeholder {
+      background-image: none;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 10/1920 * 100vw;
+      padding-left: 45/1920 * 100vw;
+    }
+  }
+  .navSelect > * {
+    color: lighten($color: $colorChangeBlack, $amount: 50);
+  }
+  .flexBox {
+    display: flex;
+  }
+  .flexDirectionColumn {
+    flex-direction: column;
+  }
+  .flexDirectionRow {
+    flex-direction: row;
+  }
+  .click {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .selectClick {
+    color: $colorChangeBlack !important;
+  }
+  .hoverLighten {
+    &:hover {
+      background-color: lighten(
+        $color: rgba(darkgray, 0.4),
+        $amount: 30
+      ) !important;
+    }
+  }
+  .transitionClass {
+    transition: all 0.3s;
+    &:hover {
+      transition: all 0.3s;
+    }
+  }
+  .hoverCursor {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .playList {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30/1920 * 100vw;
+    .playListItem {
+      height: initial;
+      width: 100%;
+      padding: 10/1920 * 100vw 0;
+      padding-left: 40/1920 * 100vw;
+      padding-right: 30/1920 * 100vw;
+      margin-bottom: 30/1920 * 100vw;
+      cursor: pointer;
+      & > * {
+        float: left;
+        margin-left: 10/1920 * 100vw;
+      }
+      .playListItemImg {
+        width: 50/1920 * 100vw;
+        height: 100%;
+        background-image: url("../img/dev-jeans.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+      }
+      .playListItemTitle {
+        height: 100%;
+        width: 80%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        line-height: 130/1920 * 100vw;
+        font-size: 130/1920 * 100vw;
+        color: $colorChangeBlack;
+        max-width: 1000/1920 * 100vw;
+      }
+      .playListSinger {
+        font-size: 95/1920 * 100vw;
+        line-height: 130/1920 * 100vw;
+        color: $colorChangeBlack;
+      }
+    }
+  }
+  .overflowScroll {
+    overflow-y: scroll;
+  }
+  .playBarFalse {
+    color: darken($color: $colorChangeBlack, $amount: 20);
+  }
+  .cancelButton {
+    color: $colorChangeBlack;
+    float: right !important;
+    font-size: 130/1920 * 100vw;
+    margin-right: 30/1920 * 100vw;
+    line-height: 130/1920 * 100vw !important;
+  }
+  .margin-left10 {
+    margin-left: 10/1920 * 100vw;
+  }
+  #volume {
+    display: none;
+  }
+  #sound {
+    display: none;
+  }
+  .xi-plus-circle-o {
+    font-size: 130/1920 * 100vw;
+    line-height: 130/1920 * 100vw !important;
+    float: right !important;
+  }
+  .libraryClose {
+    font-size: 100/1920 * 100vw;
+    line-height: 100/1920 * 100vw !important;
+    color: $colorChangeBlack;
+    float: right !important;
+  }
+  #nowCurrentTime {
+    display: none;
+  }
+  #totalTime {
+    display: none;
+  }
+}

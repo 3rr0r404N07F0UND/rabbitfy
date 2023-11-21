@@ -1,0 +1,511 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+@media all and (max-width: 1024px) {
+  * {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: "Noto Sans KR", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+  }
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  body,
+html {
+    width: 100%;
+    height: -webkit-fill-available;
+    overflow: hidden;
+    background-color: #146c94;
+  }
+  body > section,
+html > section {
+    height: 90%;
+    width: 100%;
+    display: block;
+    grid-template-columns: 14.0625vw 1fr;
+    overflow: hidden;
+    padding-top: 0.5208333333vw;
+  }
+
+  aside {
+    height: initial;
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 0.5208333333vw;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+  }
+  aside > * {
+    border-radius: 10px;
+  }
+  aside h1 {
+    display: none;
+    padding: 0.5208333333vw;
+    height: 5.2083333333vw;
+    width: 100%;
+    color: #f6f1f1;
+    background-color: #19a7ce;
+    margin-bottom: 0.5208333333vw;
+    font-size: 2.0833333333vw;
+    line-height: 4.1666666667vw;
+    font-weight: bold;
+  }
+  aside h1 > img {
+    height: 100%;
+    float: left;
+  }
+  aside nav {
+    margin-bottom: 0.5208333333vw;
+    width: 100%;
+    height: initial;
+    background-color: #19a7ce;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 0.5208333333vw;
+  }
+  aside nav > p {
+    font-size: 5.2083333333vw;
+  }
+  aside nav > p * {
+    font-size: 5.2083333333vw;
+  }
+  aside .library {
+    display: none;
+    width: 100%;
+    flex-grow: 0;
+    background-color: #19a7ce;
+    padding-top: 0.5208333333vw;
+    overflow-y: auto;
+  }
+  aside .library > div {
+    width: 100%;
+    height: initial;
+    margin-bottom: 0.5208333333vw;
+    padding-left: 0.2604166667vw;
+    overflow: hidden;
+  }
+  aside .library > div > div {
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  aside .library > div > div > p {
+    color: #f6f1f1;
+  }
+  aside .library > div .singerBG {
+    border-radius: 10px;
+    width: 2.6041666667vw;
+    height: 2.6041666667vw;
+    margin-right: 0.2604166667vw;
+    background-image: linear-gradient(blue, pink);
+    background-position: center;
+    padding: 0.3125vw;
+  }
+  aside .library > div .singerBG img {
+    height: 100%;
+  }
+  aside .library > div .libraryTitle {
+    font-size: 0.78125vw;
+  }
+  aside .library > div .makerName {
+    font-size: 0.625vw;
+    color: rgba(246, 241, 241, 0.6);
+  }
+
+  main {
+    width: 100%;
+    height: 80%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    background-color: #19a7ce;
+    margin-right: 0.5208333333vw;
+    margin-bottom: 0;
+    border-radius: 0.5208333333vw;
+    overflow: hidden;
+  }
+  main nav {
+    height: initial;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.78125vw;
+  }
+  main nav .userIcon {
+    display: none;
+    width: 13.0208333333vw;
+    height: 2.6041666667vw;
+    background-color: #f6f1f1;
+    float: right;
+    padding: 0.4166666667vw;
+    border-radius: 30px;
+    border: 1px solid #777;
+  }
+  main nav .userIcon img {
+    border-radius: 50%;
+    height: 100%;
+    float: left;
+    margin-right: 0.5208333333vw;
+  }
+  main nav .userIcon .userName {
+    color: #146c94;
+    font-size: 1.5625vw;
+    font-weight: bold;
+    line-height: 1.4583333333vw;
+    float: left;
+  }
+  main .mainItem {
+    width: 100%;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  main .mainItem > .firstBox {
+    width: 100%;
+    height: initial;
+    margin-bottom: 0.5208333333vw;
+    padding-left: 1.5625vw;
+    padding-right: 1.5625vw;
+    padding-top: 1.0416666667vw;
+  }
+  main .mainItem > .firstBox > div {
+    flex-grow: 1;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: space-between;
+    padding-right: 0.5208333333vw;
+  }
+  main .mainItem > .firstBox > div > div {
+    width: 31.25vw;
+    height: 10.4166666667vw;
+    background-color: rgba(169, 169, 169, 0.4);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 4.1666666667vw;
+  }
+  main .mainItem > .firstBox > div > div > .imgDiv {
+    height: 10.4166666667vw;
+    width: 10.4166666667vw;
+    background-image: url("../img/backgroundImg_testing.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    margin-right: 1.0416666667vw;
+  }
+  main .mainItem > .firstBox > div > div > p {
+    line-height: 9.375vw;
+    font-size: 4.1666666667vw;
+    color: #f6f1f1;
+    float: left;
+  }
+  main .mainItem > .secondBox {
+    margin-bottom: 0.5208333333vw;
+    padding-left: 1.5625vw;
+    padding-right: 1.5625vw;
+    overflow: hidden;
+  }
+  main .mainItem > .secondBox > div {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  main .mainItem > .secondBox > div > div {
+    margin-bottom: 4.1666666667vw;
+    width: 26.0416666667vw;
+    height: 36.4583333333vw;
+    border-radius: 15px;
+    background-color: rgba(169, 169, 169, 0.4);
+    overflow: hidden;
+    padding: 0;
+    padding-top: 0;
+  }
+  main .mainItem > .secondBox > div > div > .imgDiv {
+    margin: auto;
+    width: 100%;
+    height: 18.2291666667vw;
+    background-image: url("../img/testingImg.jpeg");
+    border-radius: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  main .mainItem > .secondBox > div > div .mainP {
+    margin-top: 1.5625vw;
+    font-size: 3.125vw;
+    margin-bottom: 0.2604166667vw;
+  }
+  main .mainItem > .secondBox > div > div p {
+    text-align: center;
+    margin-left: 0;
+    text-overflow: ellipsis;
+    color: #f6f1f1;
+    font-size: 2.34375vw;
+  }
+  main .mainItem h2 {
+    font-size: 6.25vw;
+    color: #f6f1f1;
+    margin-bottom: 3.125vw;
+  }
+  main .mainItem h3 {
+    font-size: 5.2083333333vw;
+    color: #f6f1f1;
+    margin-bottom: 3.125vw;
+  }
+
+  .borderRadius50 {
+    border-radius: 0 !important;
+  }
+
+  .playBar {
+    width: 100%;
+    height: 10%;
+  }
+  .playBar .musicInfo {
+    width: 23.4375vw;
+    float: left;
+    height: 100%;
+    padding: 1.0416666667vw;
+  }
+  .playBar .musicInfo .musicPhoto {
+    display: none;
+    float: left;
+    height: 2.9947916667vw;
+    width: 2.9947916667vw;
+    background-image: url("../img/music_logo_testing.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    margin-right: 0.5208333333vw;
+  }
+  .playBar .musicInfo .musicTitle {
+    font-size: 4.1666666667vw;
+    line-height: 2.9947916667vw;
+    overflow: hidden;
+    height: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #f6f1f1;
+    padding-top: 0.5208333333vw;
+    padding-left: 1.0416666667vw;
+  }
+  .playBar .musicInfo .musicTitle p {
+    margin-top: 1.0416666667vw;
+    font-size: 2.5vw;
+  }
+  .playBar .audioController {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .playBar .audioController .rangeBarBox {
+    padding: 0.5208333333vw;
+    height: 100%;
+    text-align: center;
+  }
+  .playBar .audioController .rangeBarBox .pauseStartBox {
+    color: #f6f1f1;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 0.2604166667vw;
+  }
+  .playBar .audioController .rangeBarBox .pauseStartBox * {
+    font-size: 7.8125vw;
+  }
+  .playBar .audioController .rangeBarBox .rangeBar {
+    width: 100%;
+    display: inline-block;
+  }
+  .playBar .audioController .soundOption {
+    height: 100%;
+    padding: 0.5208333333vw;
+    text-align: right;
+    padding-right: 2.0833333333vw;
+  }
+  .playBar .audioController .soundOption * {
+    line-height: initial;
+    color: #f6f1f1;
+    font-size: 7.8125vw !important;
+    margin-right: 10px;
+  }
+  .playBar .audioController .soundOption input {
+    width: 30%;
+  }
+
+  .controller {
+    float: left;
+    height: 100%;
+    display: none;
+  }
+  .controller i {
+    color: #f6f1f1;
+    margin-right: 1.0416666667vw;
+    font-size: 2.0833333333vw;
+  }
+
+  .searchBar {
+    float: left;
+    width: 95%;
+    height: 7.8125vw;
+    border-radius: 30px;
+    border: none;
+    padding: 1.0416666667vw;
+    font-size: 10px;
+    color: #f6f1f1;
+  }
+  .searchBar:hover {
+    background-color: #2a2a2a;
+    outline: 2px solid #414141;
+  }
+  .searchBar:focus {
+    outline: 3px solid #f6f1f1;
+    background-color: #2a2a2a;
+    color: white;
+  }
+  .searchBar::placeholder {
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0.5208333333vw;
+    padding-left: 2.34375vw;
+  }
+
+  .navSelect > * {
+    color: white;
+  }
+
+  .flexBox {
+    display: flex;
+  }
+
+  .flexDirectionColumn {
+    flex-direction: column;
+  }
+
+  .flexDirectionRow {
+    flex-direction: row;
+  }
+
+  .click:hover {
+    cursor: pointer;
+  }
+
+  .selectClick {
+    color: #f6f1f1 !important;
+  }
+
+  .hoverLighten:hover {
+    background-color: rgba(246, 246, 246, 0.4) !important;
+  }
+
+  .transitionClass {
+    transition: all 0.3s;
+  }
+  .transitionClass:hover {
+    transition: all 0.3s;
+  }
+
+  .hoverCursor:hover {
+    cursor: pointer;
+  }
+
+  .playList {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.5625vw;
+  }
+  .playList .playListItem {
+    height: initial;
+    width: 100%;
+    padding: 0.5208333333vw 0;
+    padding-left: 2.0833333333vw;
+    padding-right: 1.5625vw;
+    margin-bottom: 1.5625vw;
+    cursor: pointer;
+  }
+  .playList .playListItem > * {
+    float: left;
+    margin-left: 0.5208333333vw;
+  }
+  .playList .playListItem .playListItemImg {
+    width: 2.6041666667vw;
+    height: 100%;
+    background-image: url("../img/dev-jeans.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+  }
+  .playList .playListItem .playListItemTitle {
+    height: 100%;
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 6.7708333333vw;
+    font-size: 6.7708333333vw;
+    color: #f6f1f1;
+    max-width: 52.0833333333vw;
+  }
+  .playList .playListItem .playListSinger {
+    font-size: 4.9479166667vw;
+    line-height: 6.7708333333vw;
+    color: #f6f1f1;
+  }
+
+  .overflowScroll {
+    overflow-y: scroll;
+  }
+
+  .playBarFalse {
+    color: #ceb3b3;
+  }
+
+  .cancelButton {
+    color: #f6f1f1;
+    float: right !important;
+    font-size: 6.7708333333vw;
+    margin-right: 1.5625vw;
+    line-height: 6.7708333333vw !important;
+  }
+
+  .margin-left10 {
+    margin-left: 0.5208333333vw;
+  }
+
+  #volume {
+    display: none;
+  }
+
+  #sound {
+    display: none;
+  }
+
+  .xi-plus-circle-o {
+    font-size: 6.7708333333vw;
+    line-height: 6.7708333333vw !important;
+    float: right !important;
+  }
+
+  .libraryClose {
+    font-size: 5.2083333333vw;
+    line-height: 5.2083333333vw !important;
+    color: #f6f1f1;
+    float: right !important;
+  }
+
+  #nowCurrentTime {
+    display: none;
+  }
+
+  #totalTime {
+    display: none;
+  }
+}

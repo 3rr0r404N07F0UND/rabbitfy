@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylus/login.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="manifest" href="./json/manifest.json" crossorigin="use-credentials">
+    <script src="./js/login.js" type="text/javascript" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" crossorigin="anonymous"></script>
+    <title>Login Rabbitfy</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="./img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <form action="/givCookie" method="post">
+      <h1>Login</h1>
+      <input id="id" type="text" name="id" placeholder="아이디를 입력하세요.">
+      <input id="pw" type="password" name="pw" placeholder="비밀번호를 입력하세요.">
+      <p><i class="xi-error"></i>비밀번호나 아이디를 입력하세요.</p>
+      <button id="login" type="button">로그인</button>
+      <button class="displayNone" id="loginSuccess" type="submit"></button>
+    </form>
+    <form class="modal" id="modal" action="/createAccount" method="post">
+      <h1>계정을 만드시겠습니까?</h1>
+      <input id="hid" type="hidden" name="id">
+      <input id="hpw" type="hidden" name="pw">
+      <div class="centerMargin">
+        <button type="submit">네</button>
+        <button id="nope" type="button">아니요</button>
+      </div>
+    </form>
+    <main id="introModal">
+      <h1>안내</h1>
+      <p class="introP">비밀번호와 아이디를 입력하면 계정이 생성됩니다.<br />한글은 입력할 수 없습니다.</p>
+      <button id="introButton" type="button">확인</button>
+    </main>
+  </body>
+</html>

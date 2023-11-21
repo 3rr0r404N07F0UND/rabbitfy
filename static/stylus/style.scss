@@ -1,0 +1,550 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+$fontVar: "Noto Sans KR", sans-serif;
+$borderColor: #222;
+$insideColor: #19a7ce;
+$colorChangeBlack: #f6f1f1;
+$colorChangeWhite: #146c94;
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: $fontVar;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+body,
+html {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: $colorChangeWhite;
+  & > section {
+    height: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 270/1920 * 100vw 1fr;
+    overflow: hidden;
+    padding-top: 10/1920 * 100vw;
+  }
+}
+aside {
+  height: 100%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 10/1920 * 100vw;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  & > * {
+    border-radius: 10px;
+  }
+  h1 {
+    padding: 10/1920 * 100vw;
+    height: 100/1920 * 100vw;
+    width: 100%;
+    color: $colorChangeBlack;
+    background-color: $insideColor;
+    margin-bottom: 10/1920 * 100vw;
+    font-size: 40/1920 * 100vw;
+    line-height: 80/1920 * 100vw;
+    font-weight: bold;
+    & > img {
+      height: 100%;
+      float: left;
+    }
+  }
+  nav {
+    margin-bottom: 10/1920 * 100vw;
+    width: 100%;
+    height: 150/1920 * 100vw;
+    background-color: $insideColor;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 10/1920 * 100vw;
+    & > p {
+      font-size: 30/1920 * 100vw;
+      * {
+        font-size: 30/1920 * 100vw;
+      }
+    }
+  }
+  .library {
+    width: 100%;
+    flex-grow: 1;
+    background-color: $insideColor;
+    padding-top: 10/1920 * 100vw;
+    overflow-y: auto;
+    & > div {
+      width: 100%;
+      height: 70/1920 * 100vw;
+      //margin-bottom: 10/1920 * 100vw;
+      padding-left: 5/1920 * 100vw;
+      overflow: hidden;
+      //padding-top: 0;
+      //padding-bottom: 0;
+      & > div {
+        height: 100%;
+        width: 75%;
+        float: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        & > p {
+          color: $colorChangeBlack;
+        }
+      }
+      .singerBG {
+        border-radius: 10px;
+        overflow: hidden;
+        width: 50/1920 * 100vw;
+        height: 50/1920 * 100vw;
+        margin-right: 5/1920 * 100vw;
+        background-size: cover;
+        //background-image: linear-gradient(blue, pink);
+        //이거 js로 랜덤으로 줄거임
+        background-position: center;
+        //padding: 6/1920 * 100vw;
+        img {
+          height: 100%;
+        }
+      }
+      .libraryTitle {
+        font-size: 15/1920 * 100vw;
+      }
+      .makerName {
+        font-size: 12/1920 * 100vw;
+        color: rgba($color: $colorChangeBlack, $alpha: 0.6);
+      }
+    }
+  }
+}
+main {
+  height: 100%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  background-color: $insideColor;
+  margin-right: 10/1920 * 100vw;
+  margin-bottom: 0;
+  border-radius: 10/1920 * 100vw;
+  overflow: hidden;
+  nav {
+    height: 80/1920 * 100vw;
+    width: 100%;
+    padding: 15/1920 * 100vw;
+    .userIcon {
+      width: 250/1920 * 100vw;
+      height: 50/1920 * 100vw;
+      background-color: $colorChangeWhite;
+      float: right;
+      padding: 8/1920 * 100vw;
+      border-radius: 30px;
+      border: 1px solid #777;
+      img {
+        border-radius: 50%;
+        height: 100%;
+        float: left;
+        margin-right: 10/1920 * 100vw;
+      }
+      .userName {
+        color: $colorChangeBlack;
+        font-size: 20/1920 * 100vw;
+        font-weight: bold;
+        line-height: 30/1920 * 100vw;
+        float: left;
+      }
+    }
+  }
+  .mainItem {
+    width: 100%;
+    flex-grow: 1;
+    overflow-y: auto;
+    & > .firstBox {
+      width: 100%;
+      //height: 270/1920 * 100vw;
+      margin-bottom: 10/1920 * 100vw;
+      padding-left: 15/1920 * 100vw;
+      padding-top: 20/1920 * 100vw;
+      & > div {
+        flex-grow: 1;
+        flex-wrap: wrap;
+        overflow: hidden;
+        justify-content: space-between;
+        padding-right: 10/1920 * 100vw;
+        & > div {
+          width: 510/1920 * 100vw;
+          height: 150/1920 * 100vw;
+          background-color: rgba($color: darkgray, $alpha: 0.4);
+          border-radius: 10px;
+          overflow: hidden;
+          margin-bottom: 30/1920 * 100vw;
+          & > .imgDiv {
+            height: 150/1920 * 100vw;
+            width: 150/1920 * 100vw;
+            background-image: url("../img/backgroundImg_testing.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            float: left;
+            margin-right: 10/1920 * 100vw;
+          }
+          & > p {
+            line-height: 68/1920 * 100vw;
+            font-size: 50/1920 * 100vw;
+            color: $colorChangeBlack;
+            float: left;
+            &:last-child {
+              line-height: initial;
+              font-size: 25/1920 * 100vw;
+            }
+          }
+        }
+      }
+    }
+    & > .secondBox {
+      margin-bottom: 10/1920 * 100vw;
+      padding-left: 15/1920 * 100vw;
+      & > div {
+        justify-content: space-evenly;
+        & > div {
+          width: 215/1920 * 100vw;
+          height: 300/1920 * 100vw;
+          border-radius: 15px;
+          background-color: rgba($color: darkgray, $alpha: 0.4);
+          overflow: hidden;
+          padding: 10/1920 * 100vw;
+          padding-top: 10/1920 * 100vw;
+          & > .imgDiv {
+            margin-bottom: 10/1920 * 100vw;
+            width: 195/1920 * 100vw;
+            height: 200/1920 * 100vw;
+            background-image: url("../img/testingImg.jpeg");
+            border-radius: 10px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          .mainP {
+            font-size: 20/1920 * 100vw;
+            margin-bottom: 5/1920 * 100vw;
+          }
+          p {
+            color: $colorChangeBlack;
+            font-size: 15/1920 * 100vw;
+          }
+        }
+        & > .album {
+          background-color: initial;
+          text-align: center;
+        }
+      }
+    }
+    h2 {
+      font-size: 45/1920 * 100vw;
+      color: $colorChangeBlack;
+      margin-bottom: 10/1920 * 100vw;
+    }
+    h3 {
+      font-size: 35/1920 * 100vw;
+      color: $colorChangeBlack;
+      margin-bottom: 10/1920 * 100vw;
+    }
+  }
+}
+.borderRadius50 {
+  border-radius: 50% !important;
+}
+.playBar {
+  width: 100%;
+  height: 10%;
+  padding-top: 0;
+  .musicInfo {
+    width: 270/1920 * 100vw;
+    float: left;
+    height: 100%;
+    padding: 20/1920 * 100vw;
+    .musicPhoto {
+      float: left;
+      height: 57.5/1920 * 100vw;
+      width: 57.5/1920 * 100vw;
+      background-image: url();
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+      margin-right: 10/1920 * 100vw;
+    }
+    .musicTitle {
+      font-size: 20/1920 * 100vw;
+      //line-height: 57.5/1920 * 100vw;
+      overflow-x: auto;
+      overflow-y: scroll;
+      height: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: $colorChangeBlack;
+      &:hover {
+        text-overflow: clip;
+      }
+      p {
+        font-size: 12/1920 * 100vw;
+      }
+    }
+  }
+  .audioController {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    .rangeBarBox {
+      padding: 10/1920 * 100vw;
+      height: 100%;
+      text-align: center;
+      .pauseStartBox {
+        color: $colorChangeBlack;
+        display: flex;
+        justify-content: space-evenly;
+        width: 30%;
+        margin: auto;
+        margin-bottom: 5/1920 * 100vw;
+        * {
+          font-size: 30/1920 * 100vw;
+        }
+      }
+      .rangeBar {
+        width: 60%;
+        display: inline-block;
+      }
+    }
+    .soundOption {
+      height: 100%;
+      padding: 10/1920 * 100vw;
+      text-align: right;
+      padding-right: 40/1920 * 100vw;
+      * {
+        line-height: 77/1920 * 100vw;
+        color: $colorChangeBlack;
+        font-size: 35/1920 * 100vw;
+        margin-right: 10px;
+      }
+      input {
+        width: 30%;
+        height: 35%;
+      }
+    }
+  }
+}
+.controller {
+  float: left;
+  height: 100%;
+  i {
+    color: $colorChangeBlack;
+    margin-right: 20/1920 * 100vw;
+    font-size: 40/1920 * 100vw;
+  }
+}
+.searchBar {
+  float: left;
+  width: 500/1920 * 100vw;
+  height: 50/1920 * 100vw;
+  border-radius: 30px;
+  //background-color: #242424;
+  border: none;
+  padding: 10/1920 * 100vw;
+  font-size: 20px;
+  color: $colorChangeBlack;
+  &:hover {
+    background-color: #2a2a2a;
+    outline: 2px solid #414141;
+  }
+  &:focus {
+    outline: 3px solid $colorChangeBlack;
+    background-color: #2a2a2a;
+    color: white;
+  }
+  &::placeholder {
+    background-image: url("../img/search-icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 10/1920 * 100vw;
+    padding-left: 55/1920 * 100vw;
+  }
+}
+.navSelect > * {
+  color: lighten($color: $colorChangeBlack, $amount: 50);
+}
+.flexBox {
+  display: flex;
+}
+.flexDirectionColumn {
+  flex-direction: column;
+}
+.flexDirectionRow {
+  flex-direction: row;
+}
+.click {
+  &:hover {
+    cursor: pointer;
+  }
+}
+.selectClick {
+  color: $colorChangeBlack !important;
+}
+.hoverLighten {
+  &:hover {
+    background-color: lighten(
+      $color: rgba(darkgray, 0.4),
+      $amount: 30
+    ) !important;
+  }
+}
+.transitionClass {
+  transition: all 0.3s;
+  &:hover {
+    transition: all 0.3s;
+  }
+}
+.hoverCursor {
+  &:hover {
+    cursor: pointer;
+  }
+}
+.playList {
+  display: flex;
+  flex-direction: column;
+  .playListItem {
+    height: 70/1920 * 100vw;
+    width: 100%;
+    padding-left: 10/1920 * 100vw;
+    cursor: pointer;
+    & > * {
+      float: left;
+      margin-left: 10/1920 * 100vw;
+    }
+    .playListItemImg {
+      width: 50/1920 * 100vw;
+      height: 100%;
+      background-image: url("../img/dev-jeans.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 10px;
+    }
+    .playListItemTitle {
+      height: 100%;
+      max-width: 500/1920 * 100vw;
+      line-height: 50/1920 * 100vw;
+      font-size: 20/1920 * 100vw;
+      color: $colorChangeBlack;
+    }
+    .playListSinger {
+      font-size: 15/1920 * 100vw;
+      line-height: 50/1920 * 100vw;
+      color: $colorChangeBlack;
+    }
+  }
+}
+.overflowScroll {
+  overflow-y: scroll;
+}
+.playBarFalse {
+  color: gray;
+}
+.cancelButton {
+  color: $colorChangeBlack;
+  float: right !important;
+  font-size: 30/1920 * 100vw;
+  margin-right: 10px;
+  line-height: 50/1920 * 100vw !important;
+}
+.margin-left10 {
+  margin-left: 10/1920 * 100vw;
+}
+.clickScale {
+  transform: scale(1.5);
+}
+#playListLibrary {
+  transition: all 0.5s;
+  //font-size: 30/1920 * 100vw;
+}
+.libraryClose {
+  float: right !important;
+  margin-right: 30/1920 * 100vw;
+  font-size: 30/1920 * 100vw;
+  line-height: 50/1920 * 100vw !important;
+}
+.xi-plus-circle-o {
+  float: right !important;
+  margin-right: 30/1920 * 100vw;
+  font-size: 30/1920 * 100vw;
+  line-height: 50/1920 * 100vw !important;
+}
+.playListItem {
+  padding: 10/1920 * 100vw 0;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #146c94;
+    transition: all 0.3s;
+  }
+  //border-bottom: 1px solid rgba($color: black, $alpha: 0.3);
+}
+.userIcon {
+  cursor: pointer;
+  //overflow: hidden;
+  position: relative;
+}
+.userIconPhoto {
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  height: 68/1920 * 100vw;
+  width: 68/1920 * 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  border: 1px solid $colorChangeBlack;
+  float: left;
+  margin-right: 10/1920 * 100vw;
+  background-color: white;
+}
+.xi-plus-circle-o {
+  transition: all 0.3s;
+  color: $colorChangeBlack;
+}
+.userName {
+  width: 160/1920 * 100vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: break-all;
+  padding-left: 45/1920 * 100vw !important;
+}
+.backgroundColorSel {
+  background-color: lightblue;
+}
+.libraryTitle {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: break-all;
+  overflow: hidden;
+}
+.library > div {
+  cursor: pointer;
+}
+.colorWhite {
+  color: white;
+  padding: 0 10/1920 * 100vw;
+  font-size: 20/1920 * 100vw;
+  position: relative;
+  top: -3/1920 * 100vw;
+}
+.moveTitle {
+  text-overflow: initial !important;
+  overflow-x: auto !important;
+}

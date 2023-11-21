@@ -1,0 +1,146 @@
+doctype html
+html(lang="ko-KR")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Rabbitfy
+    link(rel="stylesheet", href="./stylus/style.css")
+    link(
+      rel="stylesheet",
+      href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    )
+    link(rel="stylesheet", href="./stylus/mobile.css")
+    script(
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js",
+      integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==",
+      crossorigin="anonymous"
+    )
+    script(src="./js/views.js", defer)
+    script(src="./js/timer.js", defer)
+    link(
+      rel="apple-touch-icon",
+      sizes="57x57",
+      href="./img/favicon/apple-icon-57x57.png"
+    )
+    link(
+      rel="apple-touch-icon",
+      sizes="60x60",
+      href="./img/favicon/apple-icon-60x60.png"
+    )
+    link(
+      rel="apple-touch-icon",
+      sizes="72x72",
+      href="./img/favicon/apple-icon-72x72.png"
+    )
+    link(
+      rel="apple-touch-icon",
+      sizes="76x76",
+      href="./img/favicon/apple-icon-76x76.png"
+    )
+    link(
+      rel="apple-touch-icon",
+      sizes="114x114",
+      href="./img/favicon/apple-icon-114x114.png"
+    )
+    link(
+      rel="apple-touch-icon",
+      sizes="120x120",
+      href="./img/favicon/apple-icon-120x120.png"
+    )
+    link(
+      rel="apple-touch-icon",
+      sizes="144x144",
+      href="./img/favicon/apple-icon-144x144.png"
+    )
+    link(
+      rel="apple-touch-icon",
+      sizes="152x152",
+      href="./img/favicon/apple-icon-152x152.png"
+    )
+    link(
+      rel="apple-touch-icon",
+      sizes="180x180",
+      href="./img/favicon/apple-icon-180x180.png"
+    )
+    link(
+      rel="icon",
+      type="image/png",
+      sizes="192x192",
+      href="./img/favicon/android-icon-192x192.png"
+    )
+    link(
+      rel="icon",
+      type="image/png",
+      sizes="32x32",
+      href="./img/favicon/favicon-32x32.png"
+    )
+    link(
+      rel="icon",
+      type="image/png",
+      sizes="96x96",
+      href="./img/favicon/favicon-96x96.png"
+    )
+    link(
+      rel="icon",
+      type="image/png",
+      sizes="16x16",
+      href="./img/favicon/favicon-16x16.png"
+    )
+    link(rel="manifest", href="./img/favicon/manifest.json")
+    meta(name="msapplication-TileColor", content="#ffffff")
+    meta(name="msapplication-TileImage", content="/ms-icon-144x144.png")
+    meta(name="theme-color", content="#ffffff")
+  body
+    section
+      aside
+        h1.hoverCursor
+          img(src="./img/Bad Bunny (1).svg")
+          | Rabbitfy
+        nav.navSelect
+          p#Home.click.selectClick <i class="xi-home-o"></i>Home
+          p#Search.click <i class="xi-search"></i>Search
+          p#Library.click <i class="xi-library-music"></i>Library
+        .library
+          each library in resultLibrary
+            .hoverCursor
+              .singerBG
+                img(src="./img/Love_Heart_SVG.svg", alt="")
+              div
+                p.libraryTitle #{ library.library_name }
+                p.makerName #{ library.maker_name }
+      main
+        nav
+          .controller <i class="xi-angle-left hoverCursor"></i><i class="xi-angle-right hoverCursor"></i>
+          input.searchBar(
+            type="text",
+            placeholder="What do you want to listen to?"
+          )
+          .userIcon
+            img(src="./img/dev-jeans.png", type="img/png")
+            p.userName UserName
+        section#mainItem.mainItem
+          .playList
+            .playListItem
+              .playListItemImg
+              .playListItemTitle 안녕
+              .playListSinger 자드
+    section.playBar
+      .musicInfo
+        .musicPhoto
+        .musicTitle 자드보다 아이묭
+          p.singerInfo 아이묭
+      .audioController
+        .rangeBarBox
+          .pauseStartBox
+            i#shuffleOption.xi-shuffle.hoverCursor
+            i#backward.xi-step-backward.hoverCursor
+            i#play.xi-play.hoverCursor
+            i#forward.xi-step-forward.hoverCursor
+            i#repeat.xi-repeat.hoverCursor
+          input#rangerBar.rangeBar.hoverCursor(type="range", value="0")
+        .soundOption
+          i.xi-library-music.hoverCursor
+          i.xi-volume-up.hoverCursor
+          input#sound.hoverCursor(type="range", value="100")
+          i.xi-focus-frame.hoverCursor
